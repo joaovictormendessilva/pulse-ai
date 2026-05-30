@@ -1,7 +1,7 @@
 import { GlowButton } from "@/app/shared/components/glow-button";
 import { SecondaryButton } from "@/app/shared/components/secondary-button";
 import { ChevronRight, Play } from "lucide-react";
-import { Avatars } from "../../avatars";
+import { Avatars } from "./avatars";
 
 export function HeroPresentation() {
   return (
