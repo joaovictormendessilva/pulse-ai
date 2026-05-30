@@ -3,11 +3,15 @@ import { GlowButton } from "../glow-button";
 import { HeaderLogo } from "../header-logo";
 import { HeaderNav } from "./header-nav";
 import { CustomLink } from "../custom-link/CustomLink";
+import { MAX_WIDTH_CONTAINER_CLASS } from "@/app/utils/max-width-container";
+import { MAX_PADDING_X_CONTAINER } from "@/app/utils/max-padding-x-container";
 
 export function Header() {
   return (
     <div className="border-b border-[#0d0d0d]">
-      <div className="max-w-[1440px] w-full mx-auto h-[80px] flex justify-between items-center px-[50px] md:px-[104px] ">
+      <div
+        className={`${MAX_WIDTH_CONTAINER_CLASS} w-full mx-auto h-[80px] flex justify-between items-center ${MAX_PADDING_X_CONTAINER}`}
+      >
         <div className="flex items-center gap-[40px]">
           <HeaderLogo />
           <HeaderNav />
