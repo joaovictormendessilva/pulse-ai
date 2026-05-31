@@ -10,11 +10,7 @@ export function HeroPresentation() {
       <Chip label="v2.0 Now Available with PulseEngine™" color="orange" />
 
       <h1 className="text-[72px] font-bold max-w-[548px] w-full leading-none my-[32px]">
-        AI-powered{" "}
-        <span className="bg-gradient-to-r from-[#13aa78] via-orange-500 to-[#13aa78] bg-clip-text text-transparent bg-[size:200%_200%] [animation:gradient-move_3s_ease_infinite]">
-          productivity
-        </span>{" "}
-        for modern teams
+        AI-powered <span className="gradient-animated-text">productivity</span> for modern teams
       </h1>
 
       <p className="max-w-[535px] w-full text-[20px] text-(--text-secondary) mb-[46px]">

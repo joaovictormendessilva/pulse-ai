@@ -37,3 +37,9 @@ body {
     background-position: right center;
   }
 }
+
+@layer utilities {
+  .gradient-animated-text {
+    @apply bg-gradient-to-r from-(--primary) via-orange-300 to-(--primary) bg-clip-text text-transparent bg-[size:200%_200%] [animation:gradient-move_3s_ease_infinite];
+  }
+}
