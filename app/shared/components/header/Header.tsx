@@ -1,10 +1,10 @@
-import { Activity, Menu } from "lucide-react";
+import { MAX_PADDING_X_CONTAINER } from "@/app/utils/max-padding-x-container";
+import { MAX_WIDTH_CONTAINER_CLASS } from "@/app/utils/max-width-container";
+import { Menu } from "lucide-react";
+import { CustomLink } from "../custom-link";
 import { GlowButton } from "../glow-button";
 import { HeaderLogo } from "../header-logo";
 import { HeaderNav } from "./header-nav";
-import { CustomLink } from "../custom-link/CustomLink";
-import { MAX_WIDTH_CONTAINER_CLASS } from "@/app/utils/max-width-container";
-import { MAX_PADDING_X_CONTAINER } from "@/app/utils/max-padding-x-container";
 
 export function Header() {
   return (

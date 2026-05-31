@@ -1,4 +1,4 @@
-import { CustomLink } from "../../custom-link/CustomLink";
+import { CustomLink } from "../../custom-link";
 
 export function HeaderNav() {
   return (

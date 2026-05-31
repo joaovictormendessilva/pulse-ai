@@ -2,13 +2,12 @@ import { GlowButton } from "@/app/shared/components/glow-button";
 import { SecondaryButton } from "@/app/shared/components/secondary-button";
 import { ChevronRight, Play } from "lucide-react";
 import { Avatars } from "./avatars";
+import { Chip } from "@/app/shared/components/chip";
 
 export function HeroPresentation() {
   return (
     <div>
-      <p className="flex items-center text-[12px] font-bold w-fit h-[30px] px-[20px] rounded-full bg-[#fe980023] border border-amber-800 text-amber-800">
-        v2.0 Now Available with PulseEngine™
-      </p>
+      <Chip label="v2.0 Now Available with PulseEngine™" color="orange" />
 
       <h1 className="text-[72px] font-bold max-w-[548px] w-full leading-none my-[32px]">
         AI-powered{" "}

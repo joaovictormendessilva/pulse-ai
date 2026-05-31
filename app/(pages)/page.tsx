@@ -1,3 +1,4 @@
+import { CoreCapabilitiesSection } from "./components/core-capabilities-section";
 import { HeroSection } from "./components/hero-section";
 import { PartnersSection } from "./components/partners-section";
 
@@ -28,6 +29,8 @@ export default function HomePage() {
         </div>
 
         <PartnersSection />
+
+        <CoreCapabilitiesSection />
       </div>
     </main>
   );
