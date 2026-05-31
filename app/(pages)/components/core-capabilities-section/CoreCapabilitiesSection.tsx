@@ -1,22 +1,17 @@
-import { Chip } from "@/app/shared/components/chip";
 import { Container } from "@/app/shared/components/container";
+import { SectionTitleWithChip } from "@/app/shared/components/section-title-with-chip";
 import { capabilityCards } from "./CoreCapabilitiesSection.utils";
 import { CapabilityCard } from "./capability-card";
 
 export function CoreCapabilitiesSection() {
   return (
     <Container className="flex items-center flex-col py-[128px]">
-      <div className="w-fit">
-        <Chip label="Core Capabilities" color="green" />
-      </div>
-
-      <h2 className="text-[48px] font-bold max-w-[800px] text-center leading-[48px] py-[16px]">
-        Supercharge every aspect of your workflow
-      </h2>
-
-      <p className="max-w-[660px] text-center text-(--text-secondary) mb-[65px]">
-        Our comprehensive AI suite handles the complexities so you can focus on high-impact strategic decisions.
-      </p>
+      <SectionTitleWithChip
+        chipLabel="Core Capabilities"
+        chipColor="green"
+        title="Supercharge every aspect of your workflow"
+        subtitle="Our comprehensive AI suite handles the complexities so you can focus on high-impact strategic decisions."
+      />
 
       <div className="grid grid-cols-1 min-[600px]:grid-cols-2 min-[1100px]:grid-cols-3 gap-[30px]">
         {capabilityCards.map((card) => (

@@ -3,7 +3,7 @@ import { HeroPresentation } from "./hero-presentation";
 
 export function HeroSection() {
   return (
-    <Container className="mt-[96px]">
+    <Container>
       <HeroPresentation />
     </Container>
   );

@@ -1,8 +1,9 @@
+import { Card } from "@/app/shared/components/card";
 import { CapabilityCardProps } from "./CapabilityCard.types";
 
 export function CapabilityCard({ icon, title, description, href }: CapabilityCardProps) {
   return (
-    <div className="bg-[#ffffff10] border-1 border-[#FFFFFF14] backdrop-filter-[24px] p-[28px] rounded-[14px] w-full transition duration-500 ease-in-out hover:scale-105">
+    <Card>
       <div className="h-[50px] w-[50px] rounded-[14px] bg-[#13AA781A] border-1 border-[#13AA7833] flex justify-center items-center">
         {icon}
       </div>
@@ -14,6 +15,6 @@ export function CapabilityCard({ icon, title, description, href }: CapabilityCar
       <a href={href} className="inline-flex items-center gap-1 text-[14px] text-(--primary) mt-[24px]">
         Learn more →
       </a>
-    </div>
+    </Card>
   );
 }
