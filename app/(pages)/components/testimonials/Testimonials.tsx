@@ -1,7 +1,7 @@
 import { Container } from "@/app/shared/components/container";
 import { SectionTitleWithChip } from "@/app/shared/components/section-title-with-chip";
 import { testimonials } from "./Testimonials.utils";
-import { Testimonial } from "./testimonial";
+import { TestimonialCard } from "./testimonial-card";
 
 export function Testimonials() {
   return (
@@ -15,7 +15,7 @@ export function Testimonials() {
 
       <div className="grid grid-cols-1 min-[900px]:grid-cols-3 gap-[30px]">
         {testimonials.map((testimonial) => (
-          <Testimonial key={testimonial.id} testimonial={testimonial} />
+          <TestimonialCard key={testimonial.id} testimonial={testimonial} />
         ))}
       </div>
     </Container>

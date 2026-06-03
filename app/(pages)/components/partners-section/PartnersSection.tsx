@@ -1,9 +1,10 @@
 import { Container } from "@/app/shared/components/container";
+import { SectionBorder } from "@/app/shared/components/section-border";
 import { Partners } from "./partners";
 
 export function PartnersSection() {
   return (
-    <div className="bg-[#FFFFFF03] border-t-1 border-t-[#FFFFFF0D] border-b-1 border-b-[#FFFFFF0D]">
+    <SectionBorder>
       <Container className="py-[96px] flex justify-center items-center flex-col gap-[48px]">
         <h2 className="text-[14px] font-[600] uppercase text-center">
           Accelerating growth for the world's most innovative companies
@@ -18,6 +19,6 @@ export function PartnersSection() {
           <Partners title="Figma" />
         </div>
       </Container>
-    </div>
+    </SectionBorder>
   );
 }

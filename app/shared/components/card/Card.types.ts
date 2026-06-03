@@ -1,3 +1,4 @@
-export type CardProps = {
+export interface CardProps {
   children: React.ReactNode;
-};
+  highlighted?: boolean;
+}

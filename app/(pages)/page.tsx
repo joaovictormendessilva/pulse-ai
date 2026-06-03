@@ -1,8 +1,17 @@
+import { CircleCheck } from "lucide-react";
+import { Card } from "../shared/components/card";
+import { Container } from "../shared/components/container";
+import { Divider } from "../shared/components/divider";
+import { SectionBorder } from "../shared/components/section-border";
+import { SectionTitleWithChip } from "../shared/components/section-title-with-chip";
 import { CoreCapabilitiesSection } from "./components/core-capabilities-section";
 import { HeroSection } from "./components/hero-section";
 import { MetricsSection } from "./components/metrics-section";
 import { PartnersSection } from "./components/partners-section";
 import { Testimonials } from "./components/testimonials";
+import { SecondaryButton } from "../shared/components/secondary-button";
+import { GlowButton } from "../shared/components/glow-button";
+import { PricesSection } from "./components/prices-section";
 
 export default function HomePage() {
   return (
@@ -37,6 +46,8 @@ export default function HomePage() {
         <MetricsSection />
 
         <Testimonials />
+
+        <PricesSection />
       </div>
     </main>
   );

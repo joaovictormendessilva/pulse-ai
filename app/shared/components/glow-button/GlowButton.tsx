@@ -13,7 +13,7 @@ export function GlowButton({ children, RightIcon, LeftIcon, glowAlways = false }
     before:bg-white before:shadow-[0_0_50px_30px_white] before:-skew-x-[20deg]
     hover:before:[animation:sh02_0.5s_linear]
     active:before:[animation:sh02_0.5s_linear]
-    flex items-center gap-[5px]
+    flex items-center gap-[5px] justify-center
     ${glowAlways ? "shadow-[0_0_30px_5px_rgba(19,170,120,0.6)]" : ""}
   `}
     >
