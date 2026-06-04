@@ -15,7 +15,7 @@ export function PricesSection() {
           chipLabel="Pricing Plans"
         />
 
-        <div className="flex justify-between">
+        <div className="flex max-[1000px]:flex-col justify-between max-[1000px]:items-center gap-[20px]">
           {plans.map((plan) => (
             <PriceCard key={plan.id} {...plan} />
           ))}
