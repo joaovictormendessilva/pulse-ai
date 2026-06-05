@@ -7,7 +7,7 @@ import { Container } from "@/app/shared/components/container";
 export function PricesSection() {
   return (
     <SectionBorder>
-      <Container className="py-[128px]">
+      <Container>
         <SectionTitleWithChip
           title="Scale your team with confidence"
           subtitle="Transparent, simple pricing designed to grow with your organization's ambitions."

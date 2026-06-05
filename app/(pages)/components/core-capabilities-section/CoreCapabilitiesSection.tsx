@@ -5,7 +5,7 @@ import { CapabilityCard } from "./capability-card";
 
 export function CoreCapabilitiesSection() {
   return (
-    <Container className="flex items-center flex-col py-[128px]">
+    <Container className="flex items-center flex-col">
       <SectionTitleWithChip
         chipLabel="Core Capabilities"
         chipColor="green"

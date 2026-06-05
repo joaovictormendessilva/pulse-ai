@@ -5,7 +5,7 @@ import { Metric } from "./metric";
 export function MetricsSection() {
   return (
     <SectionBorder>
-      <Container className="py-[128px]">
+      <Container>
         <div className="grid grid-cols-2 min-[600px]:grid-cols-4 gap-[30px]">
           <Metric title="4M+" subtitle="Automations Created" />
           <Metric title="120k" subtitle="Active Global Teams" />

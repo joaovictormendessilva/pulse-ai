@@ -5,7 +5,7 @@ import { TestimonialCard } from "./testimonial-card";
 
 export function Testimonials() {
   return (
-    <Container className="py-[128px]">
+    <Container>
       <SectionTitleWithChip
         chipLabel="Success Stories"
         chipColor="green"
