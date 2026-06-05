@@ -14,7 +14,7 @@ export function CommonQuestionsSection() {
         chipLabel="FAQ"
       />
 
-      <div className="flex flex-col gap-[20px]">
+      <div className="flex flex-col gap-[20px] max-w-[768px] w-full m-auto">
         {questions.map((question) => (
           <Card key={question.id} disableTransition>
             <details className="group" open={question.isOpen}>

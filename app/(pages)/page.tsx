@@ -1,5 +1,6 @@
 import { CommonQuestionsSection } from "./components/common-questions-section";
 import { CoreCapabilitiesSection } from "./components/core-capabilities-section";
+import { CTASection } from "./components/cta-section";
 import { HeroSection } from "./components/hero-section";
 import { MetricsSection } from "./components/metrics-section";
 import { PartnersSection } from "./components/partners-section";
@@ -43,6 +44,8 @@ export default function HomePage() {
         <PricesSection />
 
         <CommonQuestionsSection />
+
+        <CTASection />
       </div>
     </main>
   );
