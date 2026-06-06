@@ -43,3 +43,18 @@ body {
     @apply bg-gradient-to-r from-(--primary) via-orange-300 to-(--primary) bg-clip-text text-transparent bg-[size:200%_200%] [animation:gradient-move_3s_ease_infinite];
   }
 }
+
+@keyframes bar-breathe {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.08);
+  }
+}
+
+.animate-bar {
+  transform-origin: bottom;
+  animation: bar-breathe var(--duration) ease-in-out infinite;
+}
