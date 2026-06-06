@@ -4,7 +4,9 @@ import { ContainerProps } from "./Container.types";
 
 export function Container({ children, className }: ContainerProps) {
   return (
-    <div className={`${MAX_WIDTH_CONTAINER_CLASS} m-auto ${MAX_PADDING_X_CONTAINER} py-[128px] ${className ?? ""}`}>
+    <div
+      className={`${MAX_WIDTH_CONTAINER_CLASS} m-auto ${MAX_PADDING_X_CONTAINER} py-[80px] min-[600px]:py-[128px] ${className ?? ""}`}
+    >
       {children}
     </div>
   );

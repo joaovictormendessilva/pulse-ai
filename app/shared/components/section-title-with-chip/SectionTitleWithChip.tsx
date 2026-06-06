@@ -8,7 +8,9 @@ export function SectionTitleWithChip({ chipLabel, chipColor, title, subtitle }: 
         <Chip label={chipLabel} color={chipColor} />
       </div>
 
-      <h2 className="text-[48px] font-bold max-w-[800px] text-center leading-[48px] py-[16px]">{title}</h2>
+      <h2 className="text-[28px] min-[555px]:text-[48px] font-bold max-w-[800px] text-center min-[555px]:leading-[48px] min-[555px]:py-[16px]">
+        {title}
+      </h2>
 
       <p className="max-w-[660px] text-center text-(--text-secondary) mb-[65px]">{subtitle}</p>
     </div>

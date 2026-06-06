@@ -30,7 +30,7 @@ export default function HomePage() {
       />
 
       <div className="relative z-10">
-        <div className="mb-[130px]">
+        <div className="mb-[40px] min-[555px]:mb-[130px]">
           <HeroSection />
         </div>
 

@@ -9,7 +9,7 @@ export function HeroPresentation() {
     <div>
       <Chip label="v2.0 Now Available with PulseEngine™" color="orange" />
 
-      <h1 className="text-[72px] font-bold max-w-[548px] w-full leading-none my-[32px]">
+      <h1 className="text-[30px] min-[555px]:text-[72px] font-bold max-w-[548px] w-full leading-none my-[32px]">
         AI-powered <span className="gradient-animated-text">productivity</span> for modern teams
       </h1>
 
@@ -18,14 +18,14 @@ export function HeroPresentation() {
         system. Built for speed, scaled with AI.
       </p>
 
-      <div className="flex gap-[16px]">
+      <div className="flex flex-col min-[555px]:flex-row gap-[16px] ">
         <GlowButton glowAlways RightIcon={<ChevronRight size={18} strokeWidth={3} />}>
           Get Started for Free
         </GlowButton>
         <SecondaryButton LeftIcon={<Play size={18} strokeWidth={3} />}>Watch Demo</SecondaryButton>
       </div>
 
-      <div className="mt-[56px] flex items-center gap-[24px]">
+      <div className="mt-[56px] flex flex-col min-[555px]:flex-row items-center gap-[24px]">
         <Avatars />
         <span className="text-[14px]">
           <strong>1,200+</strong> teams joined this week
