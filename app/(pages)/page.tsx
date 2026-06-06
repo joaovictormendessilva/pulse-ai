@@ -1,3 +1,4 @@
+import { Footer } from "../shared/components/footer";
 import { CommonQuestionsSection } from "./components/common-questions-section";
 import { CoreCapabilitiesSection } from "./components/core-capabilities-section";
 import { CTASection } from "./components/cta-section";
@@ -46,6 +47,8 @@ export default function HomePage() {
         <CommonQuestionsSection />
 
         <CTASection />
+
+        <Footer />
       </div>
     </main>
   );
