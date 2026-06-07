@@ -1,9 +1,11 @@
-import { Activity, ChartColumn, LayoutDashboard, Search, ShieldCheck, Sparkles, UsersRound } from "lucide-react";
+import { Activity, ChartColumn, LayoutDashboard, Search, ShieldCheck, UsersRound } from "lucide-react";
+import { ActivityItem } from "./activity-item";
 import { ChartBar } from "./chart-bar";
+import { IllustrationCta } from "./illustration-cta";
+import { IllustrationOnlineUsers } from "./illustration-online-users";
+import { activities, bars, illustrationCards } from "./SystemIllustration.utils";
 
 export function SystemIllustration() {
-  const bars = [100, 140, 80, 125, 100, 140, 80, 125, 100, 140];
-
   return (
     <div className="flex relative h-fit" style={{ filter: "drop-shadow(0 0 40px rgba(255,255,255,0.15))" }}>
       {/* Menus */}
@@ -34,28 +36,16 @@ export function SystemIllustration() {
 
         <div className="flex pl-[24px] pt-[24px] gap-[24px]">
           <div className="flex flex-col">
-            <div className="flex gap-[15px]  mb-[24px]">
-              <div>
-                <div className="bg-[#FFFFFF08] border-[1px] border-[#FFFFFF0D] w-[93px] h-[111px] rounded-[14px] pl-[17px] pt-[17px]">
-                  <h6 className="text-[10px] font-bold max-w-[49px]">ACTIVE USERS</h6>
-                  <p className="text-[20px] font-bold mt-[4px]">1.2k</p>
-                  <p className="text-[10px]">+12%</p>
+            <div className="flex gap-[15px] mb-[24px]">
+              {illustrationCards.map((card) => (
+                <div key={card.title}>
+                  <div className="bg-[#FFFFFF08] border-[1px] border-[#FFFFFF0D] w-[93px] h-[111px] rounded-[14px] pl-[17px] pt-[17px]">
+                    <h6 className="text-[10px] font-bold max-w-[49px]">{card.title}</h6>
+                    <p className="text-[20px] font-bold mt-[4px]">{card.value}</p>
+                    <p className="text-[10px]">{card.percentage}</p>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <div className="bg-[#FFFFFF08] border-[1px] border-[#FFFFFF0D] w-[93px] h-[111px] rounded-[14px] pl-[17px] pt-[17px]">
-                  <h6 className="text-[10px] font-bold max-w-[49px]">EFFICIENCY</h6>
-                  <p className="text-[20px] font-bold mt-[4px]">94%</p>
-                  <p className="text-[10px]">+5%</p>
-                </div>
-              </div>
-              <div>
-                <div className="bg-[#FFFFFF08] border-[1px] border-[#FFFFFF0D] w-[93px] h-[111px] rounded-[14px] pl-[17px] pt-[17px]">
-                  <h6 className="text-[10px] font-bold max-w-[49px]">WORKFLOWS</h6>
-                  <p className="text-[20px] font-bold mt-[4px]">432</p>
-                  <p className="text-[10px]">+28%</p>
-                </div>
-              </div>
+              ))}
             </div>
 
             <div className="w-[311px] h-[193px] bg-[#FFFFFF08] border-[1px] border-[#FFFFFF0D] rounded-l-[14px] rounded-r-[14px] pt-[24px] px-[24px]">
@@ -77,77 +67,17 @@ export function SystemIllustration() {
           </div>
 
           <div className="h-[328px] w-[144px] bg-[#FFFFFF08] border-[1px] border-[#FFFFFF0D] pt-[56px] pl-[21px] flex flex-col gap-[15px]">
-            <div className="flex items-center gap-[11px]">
-              <div className="w-[7px] h-[8px] rounded-full bg-orange-400" />
-              <div>
-                <p className="text-[11px] font-bold w-[60px]">Workflow optimized</p>
-                <p className="text-[9px] text-(--text-secondary)">2 mins ago • Alex</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-[11px]">
-              <div className="w-[7px] h-[8px] rounded-full bg-orange-400" />
-              <div>
-                <p className="text-[11px] font-bold w-[60px]">Workflow optimized</p>
-                <p className="text-[9px] text-(--text-secondary)">2 mins ago • Alex</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-[11px]">
-              <div className="w-[7px] h-[8px] rounded-full bg-orange-400" />
-              <div>
-                <p className="text-[11px] font-bold w-[60px]">Workflow optimized</p>
-                <p className="text-[9px] text-(--text-secondary)">2 mins ago • Alex</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-[11px]">
-              <div className="w-[7px] h-[8px] rounded-full bg-orange-400" />
-              <div>
-                <p className="text-[11px] font-bold w-[60px]">Workflow optimized</p>
-                <p className="text-[9px] text-(--text-secondary)">2 mins ago • Alex</p>
-              </div>
-            </div>
+            {activities.map((activity, index) => (
+              <ActivityItem key={index} title={activity.title} description={activity.description} />
+            ))}
           </div>
         </div>
       </div>
       {/* Absolute CTA */}
-      <div className="absolute h-[167px] w-[224px] bg-[#292929] rounded-[14px] right-[-25px] top-[-25px] border-[1px] border-[#ffffff60] px-[17px] pt-[17px]">
-        <div className="flex items-center gap-[12px]">
-          <div className="bg-[#13AA7833] w-[32px] h-[32px] rounded-full flex justify-center items-center">
-            <Sparkles size={16} color="var(--primary)" />
-          </div>
+      <IllustrationCta />
 
-          <h6 className="text-[12px] font-bold">Pulse AI Insight</h6>
-        </div>
-
-        <p className="text-[10px] text-(--text-secondary) mt-[11px] mb-[13px]">
-          We detected a 14% lag in the 'Backend Refactor' workflow. Suggesting smart automation...
-        </p>
-
-        <button className="bg-(--primary) h-[28px] text-[10px] w-full rounded-full cursor-pointer">
-          Apply Optimization
-        </button>
-      </div>
       {/* Absolute Online Users */}
-      <div className="absolute flex items-center pl-[17px] gap-[16px] rounded-[14px] w-[192px]  h-[62px] bg-[#292929] border-[1px] border-[#ffffff60] bottom-[-28px] left-[-30px]">
-        <div className="flex -space-x-2 overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-            alt=""
-            className="inline-block size-8 rounded-full ring-2 ring-gray-900 outline -outline-offset-1 outline-white/10"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-            alt=""
-            className="inline-block size-8 rounded-full ring-2 ring-gray-900 outline -outline-offset-1 outline-white/10"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
-            alt=""
-            className="inline-block size-8 rounded-full ring-2 ring-gray-900 outline -outline-offset-1 outline-white/10"
-          />
-        </div>
-
-        <p className="text-[10px] font-bold">+12 Online</p>
-      </div>
+      <IllustrationOnlineUsers />
     </div>
   );
 }
