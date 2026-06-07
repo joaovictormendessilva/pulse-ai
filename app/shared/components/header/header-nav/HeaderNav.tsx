@@ -1,21 +1,15 @@
 import { CustomLink } from "../../custom-link";
+import { NAV_ITEMS } from "./HeaderNav.utils";
 
 export function HeaderNav() {
   return (
     <nav className="block max-[1000px]:hidden">
       <ul className="flex gap-[31px]">
-        <li>
-          <CustomLink href="">Features</CustomLink>
-        </li>
-        <li>
-          <CustomLink href="">Pricing</CustomLink>
-        </li>
-        <li>
-          <CustomLink href="">Dashboard</CustomLink>
-        </li>
-        <li>
-          <CustomLink href="">About</CustomLink>
-        </li>
+        {NAV_ITEMS.map((item) => (
+          <li key={item.href}>
+            <CustomLink href={item.href}>{item.label}</CustomLink>
+          </li>
+        ))}
       </ul>
     </nav>
   );
